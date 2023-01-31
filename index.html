@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculate</title>
+  <link rel="stylesheet" href="src/css/plugins.css">
+  <link rel="stylesheet" href="src/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+
+    <header class="header">
+
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="ranges">
+          <div class="range">
+            <div class="range_title">Storage: <span class="range_count" id="storageValue">0</span> GB</div>
+            <div class="range_input">
+              <input type="range" id="storageInput" step="1" min="0" max="1000" value="300">
+            </div>
+            <div class="range_item">
+              <div class="range_from">0</div>
+              <div class="range_to" id="storageRangeMax"></div>
+            </div>
+          </div>
+          <div class="range">
+            <div class="range_title">Transfer: <span class="range_count" id="transferValue">0</span> GB</div>
+            <div class="range_input">
+              <input type="range" id="transferInput" step="1" min="0" max="1000" value="300">
+            </div>
+            <div class="range_item">
+              <div class="range_from">0</div>
+              <div class="range_to" id="transferRangeMax"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="providers">
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+
+
+</body>
+
+</html>

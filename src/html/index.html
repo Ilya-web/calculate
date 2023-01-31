@@ -1,0 +1,40 @@
+@@include('components/head/index.html', {'title': 'calculate'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main class="main">
+    <div class="container">
+      <div class="ranges">
+        <div class="range">
+          <div class="range_title">Storage: <span class="range_count" id="storageValue">0</span> GB</div>
+          <div class="range_input">
+            <input type="range" id="storageInput" step="1" min="0" max="1000" value="300">
+          </div>
+          <div class="range_item">
+            <div class="range_from">0</div>
+            <div class="range_to" id="storageRangeMax"></div>
+          </div>
+        </div>
+        <div class="range">
+          <div class="range_title">Transfer: <span class="range_count" id="transferValue">0</span> GB</div>
+          <div class="range_input">
+            <input type="range" id="transferInput" step="1" min="0" max="1000" value="300">
+          </div>
+          <div class="range_item">
+            <div class="range_from">0</div>
+            <div class="range_to" id="transferRangeMax"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="providers">
+
+      </div>
+    </div>
+  </main>
+
+  @@include('components/footer/index.html')
+</div>
+
+@@include('components/scripts/index.html')

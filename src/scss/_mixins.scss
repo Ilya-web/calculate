@@ -1,0 +1,51 @@
+@mixin transition {
+  transition: all ease 0.3s;
+}
+
+@mixin reset-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin gapTop($mt) {
+  margin-top: -$mt;
+  & > [class^="col-"] {
+    margin-top: $mt;
+  }
+}
+
+@mixin link-animation-in($color, $bg-h: 1px) {
+  background: linear-gradient(0deg, $color, $color) no-repeat right bottom / 0
+    $bg-h;
+  transition: background-size 0.3s;
+
+  &:where(:hover, :focus-visible) {
+    background-size: 100% $bg-h;
+    background-position-x: left;
+  }
+}
+
+@mixin link-animation-out($color, $bg-h: 1px) {
+  background: linear-gradient(0deg, $color, $color) no-repeat right bottom / 0
+    $bg-h;
+  transition: background-size 0.3s;
+  background-size: 100% $bg-h;
+
+  &:where(:hover, :focus-visible) {
+    background-size: 0 $bg-h;
+    background-position-x: right;
+  }
+}
+
+@mixin hover($colorHover, $colorActive) {
+  @media all and (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      color: $colorHover;
+    }
+  }
+  &:active {
+    color: $colorActive;
+  }
+}
